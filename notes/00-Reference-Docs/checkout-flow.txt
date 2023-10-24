@@ -1,0 +1,35 @@
+
+Initial idea of the flow of making a new order:
+
+
+user clicks "checkout" button
+
+GET cart items
+
+check all items "isSold" = false
+
+    if items are sold, return to front end "x, y, z items are sold" (to notify user)
+    -- remove sold items from cart
+    -- continue with checkout of non-sold items
+
+    checkout:
+        transaction:
+            change item states to sold in DB
+
+            STRIPE stuff
+
+            apply stripe ID to items in DB
+
+frontend: take user to "view order" page
+
+    GET order by ID (stripe ID?)
+
+
+
+
+
+
+
+
+
+

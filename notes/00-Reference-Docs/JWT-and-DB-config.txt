@@ -1,0 +1,9 @@
+
+
+DB connection:
+Credentials go in server/config/config.json
+
+JWT secrets:
+see note in OneDrive
+
+

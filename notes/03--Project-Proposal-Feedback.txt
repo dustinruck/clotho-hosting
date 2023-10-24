@@ -1,0 +1,87 @@
+========================================================================================
+========================================================================================
+Project Proposal Feedback
+Meeting with Gregory
+2023-10-05
+----------------------------------------------------------------------------------------
+Feature Prioritization, According to Gregory:
+
+	Critically Important:
+		-Cart 
+			-Use a library, don't manually code it
+			-Research to find a front-end solution (no extra DB table)
+		-Cancellation / Refund
+		-In-House Notifications
+			-Your item sold
+			-(future) direct messages
+		-Admin Page
+			-Stats
+				-use charting library at least once
+				-e.g. orders per day
+			-User Management
+		-Users' Profile Pages
+
+	Extras in order of importance:
+		-Categories (filtering by type - tops, bottoms, etc)
+		-Messages
+		-Likes/Wishlist
+	
+
+----------------------------------------------------------------------------------------
+Our own brainstorming re: filter criteria:
+
+	Two proposed solutions:
+
+		1: (no extra db tables)
+			-Each search filter = One extra column on `listings` table.
+			-NOT ENUMs
+			-e.g:
+				-Gender(string) = "men" OR "women" OR "uni"
+				-Size (String) = “S”, “M”, “L”, “0”, “2”, “4”, “8.5”
+				-Category/Type (String) = “top”, "bottom”, “accessory”
+		2: (current implementation)
+			-Extra db table per filter
+				-consistent with the rest of the app's backend
+			-Fields in listing = FK with filter's id
+
+We're going with option 2!
+----------------------------------------------------------------------------------------
+Gregory's other instructions:
+
+	-Only have one version of the GET listings
+		-Format: /search ? Category=xxx &priceMin=yyy &seller=zzz &aaa=bbb
+		-If no filters are provided, it's just /search = getAll()
+
+	-Consider sending additional data to a user if they are viewing their own listings
+		-i.e. user id = the id of the user whose profile we are on
+		-delete/unDelete buttons
+		-number of times it's been viewed
+		-etc.
+
+	-Use Transactions for these:
+		-API call: OST /api/orders (Create New Order)
+		-Checkout, which includes:
+			-checking if listings are sold
+			-marking listings as sold
+			-accepting payment
+			-etc
+
+	-Store the transaction ID from Stripe!!
+
+	-JWT is the only answer for login
+
+	-Trello: 
+		-1 card is allowed for "Initial Setup" for first 48 hours.
+		-Each user story card should contain all notes/ideas/visions for it
+			-including a "todo list"
+	
+	-Email subscription / order confirmation / server / etc. consider using:
+		-MailTrap
+		-Gmail
+		-Sangrit (?)
+
+	-Add category field to `listings` table
+		
+
+========================================================================================
+========================================================================================

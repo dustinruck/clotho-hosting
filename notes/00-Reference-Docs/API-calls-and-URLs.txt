@@ -1,0 +1,137 @@
+Beginning list of API calls
+
+========================ADMIN ONLY========================
+
+        -------------------------------item attributes-------------------------------
+
+GET list incl deleted:              api/admin/categories
+                                    api/admin/genders
+                                    api/admin/sizes
+
+
+GET single record incl deleted:     api/admin/categories/:id([0-9]+)
+                                    api/admin/genders/:id([0-9]+)
+                                    api/admin/sizes/:id([0-9]+)
+
+POST new record:                    api/admin/categories
+                                    api/admin/genders
+                                    api/admin/sizes
+
+PATCH edit name single record:      api/admin/categories/:id([0-9]+)
+                                    api/admin/genders/:id([0-9]+)
+                                    api/admin/sizes/:id([0-9]+)
+
+PATCH undelete single record:       api/admin/categories/undelete/:id([0-9]+)
+                                    api/admin/genders/undelete/:id([0-9]+)
+                                    api/admin/sizes/undelete/:id([0-9]+)
+
+DELETE single record:               api/admin/categories/:id([0-9]+)
+                                    api/admin/genders/:id([0-9]+)
+                                    api/admin/sizes/:id([0-9]+)
+
+
+        -------------------------------users-------------------------------
+
+GET list incl deleted:              api/admin/users
+GET by id incl deleted:             api/admin/users/:id([0-9]+)
+POST new user:                      api/admin/users
+PUT edit existing user:             api/admin/users/:id([0-9]+)
+DELETE user:                        api/admin/users/:id([0-9]+)
+PATCH undelete user:                api/admin/users/undelete/:id([0-9]+)
+
+        -------------------------------listings-------------------------------
+
+GET list incl deleted:                  api/admin/listings
+GET by id incl deleted:                 api/admin/listings/:id([0-9]+)
+GET list by seller username:            api/admin/listings/seller/:username
+POST new listing:                       api/admin/listings
+PUT edit existing listing               
+(title, desc, img, price, attributes):  api/admin/listing/:id([0-9]+)
+DELETE listing:                         api/admin/listings/:id([0-9]+)
+PATCH undelete listing:                    api/admin/listings/undelete/:id([0-9]+)
+PATCH mark as sold:                     api/admin/listings/sold/:id([0-9]+)
+PATCH mark as for sale (cancel sale):   api/admin/listings/unsold/:id([0-9]+)
+
+Note about POST and PUT for listings: 
+Decimals are currently converted in the backend from dollars and cents.
+Prices in requests should be sent with two decimal places e.g. "0.99", "50.00".
+GET will retrieve these values from db as "099", "5000" and respond with "0.99", "50.00".
+
+ALSO: do not send seller id in request body--it will be retrieved from auth tokens.
+
+        -------------------------------orders-------------------------------
+
+GET list incl cancelled:                api/admin/orders
+GET by id incl cancelled:               api/admin/orders/:id([0-9]+)
+GET list by buyer username:             api/admin/orders/buyer/:username
+POST new order:                         api/admin/orders
+DELETE cancel order:                    api/admin/orders/:id([0-9]+)
+
+POST requests for orders must include buyerId and listing ids of cart items. Example:
+
+    {
+        "buyerId": "2",
+        "items": [2, 1]
+    }
+
+========================ALL USERS========================
+
+        -------------------------------login/logout-------------------------------
+
+POST login:                         api/auth/login
+DELETE logout:                      api/auth/logout
+
+        -------------------------------item attributes-------------------------------
+
+GET list excl deleted:              api/attr/categories
+                                    api/attr/genders
+                                    api/attr/sizes
+
+GET single record excl deleted:     api/attr/categories/:id([0-9]+)
+                                    api/attr/genders/:id([0-9]+)
+                                    api/attr/sizes/:id([0-9]+)
+
+        -------------------------------user profile-------------------------------
+
+GET user private view (with listings)   api/users/profile
+GET seller public view (with listings)  api/users/:username
+POST register new user                  api/users/
+PUT update user profile                 api/users/profile
+DELETE close account                    api/users/:id([0-9]+)
+
+note: for updating profile, include any or all fields (username, email, avatar, password), but only where changes are being made; any null fields will leave those columns unchanged
+        -------------------------------listings-------------------------------
+
+GET all available                       api/listings/
+GET all not deleted by seller           api/listings/seller/:username
+POST new listing                        api/listings/
+PUT update listing                      api/listings/:id([0-9]+)
+DELETE listing                          api/listings/:id([0-9]+)
+
+note: search filters are only available in GET api/listings and GET api/admin listings
+query params:
+- category
+- gender
+- size
+- search (uses where %LIKE% on title and description)
+- minPrice
+- maxPrice (prices are converted to decimal in back end so ?maxPrice=50 means $50.00 aka 5000 in decimal type)
+- sorByPrice: either 'asc' or 'desc'
+        -------------------------------orders-------------------------------
+
+GET by id:                              api/orders/:id([0-9]+)
+GET private list for buyer:             api/orders
+POST new order:                         api/orders
+DELETE cancel order:                    api/orders/:id([0-9]+)
+
+        -------------------------------images-------------------------------
+
+GET listing thumbnail by listing id:    api/images/thumbnail/:id([0-9]+)
+GET user avatar by filename:            api/images/avatar/:fileName
+GET image preview by filename:          api/images/preview/:fileName
+
+POST upload user avatar:                api/images/avatar
+POST upload listing images:             api/images
+
+note: preview is used after uploading to S3 and before saving to db
+POST requests upload photos to s3 and return record to store in db

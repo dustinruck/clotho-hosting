@@ -1,0 +1,8 @@
+
+
+Note about retrieving other details from server:
+
+Errors sent from API include both 'status' and 'message' properties to be used in front as needed.
+So far, POST, PATCH, and DELETE responses include a 'message' property and, where relevant, a nested model object reflecting changes made.
+
+

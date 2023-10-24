@@ -1,0 +1,10 @@
+
+
+
+Note about model aliases:
+
+So far, Users are associated to Listings and Orders with the aliases 'seller' and 'buyer', respectively.
+(below: not yet implemented)
+When necessary, JSON response objects will include a nested user object under the appropriate alias in order to access relevant details.
+Example: 'order.buyer.username' and 'listing.seller.username'
+

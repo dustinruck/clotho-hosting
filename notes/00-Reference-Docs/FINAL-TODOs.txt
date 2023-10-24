@@ -1,0 +1,24 @@
+
+
+
+A place to put all of the last minute things.
+
+
+
+
+----------------------------- General ----------------------------
+- Stress test whole site. (try to find all errors)
+
+- Finalize Appearance.
+
+
+
+
+----------------------------- Specific ----------------------------
+- Loading page instead of 'page not found' while waiting for api calls to load.
+
+
+
+
+
+

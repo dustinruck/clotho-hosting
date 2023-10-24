@@ -1,0 +1,18 @@
+Links to resources
+
+TUTORIAL VIDEOS: 
+
+React Login, Registration, Auth
+https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd
+
+JWT Authentication - Node.js
+https://www.youtube.com/watch?v=mbsmsi7l3r4
+
+Storing Images in S3 from Node Server
+https://www.youtube.com/watch?v=eQAIojcArRY
+
+React Hooks
+https://www.youtube.com/playlist?list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h
+
+JWT Logout
+https://medium.com/devgorilla/how-to-log-out-when-using-jwt-a8c7823e8a6

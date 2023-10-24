@@ -1,0 +1,728 @@
+         ____        _ __         _____                         
+        / __ \____ _(_) /_  __   / ___/____________  ______ ___ 
+       / / / / __ `/ / / / / /   \__ \/ ___/ ___/ / / / __ `__ \          
+      / /_/ / /_/ / / / /_/ /   ___/ / /__/ /  / /_/ / / / / / /
+     /_____/\__,_/_/_/\__, /   /____/\___/_/   \__,_/_/ /_/ /_/      
+                     /____/                                     
+===============================================================================
+Team #3:
+	Dustin Ruck
+	Meredith White
+	Soliloquy Yarrow
+
+Project: Clotho | Depop Clone
+
+===============================================================================
+Day00: 2023-10-05 R
+===================
+
+Dustin:
+	Todo Before Next Scrum:
+		- Set up Cloud:
+			- Heroku
+			- Azure DB
+				- No Tables
+				- Schema (Send DB name to Meredith)
+				- Create DBA god-user (also send to Meredith)
+			- S3
+		- Sign up for Stripe / Payment-Processing Account
+
+Soli:
+	Todo Before Next Scrum:
+		- Organize & send notes to group
+			- This Doc
+			- Proposal Feedback
+		- (After Meredith makes directories)
+			- Setup Client Directory
+			- Initialize React App
+		- Create Skeleton Views/Pages/Components for:
+			- Login/Register
+				- Bypass Auth
+				- Redirect to Admin Portal
+		- Create Admin Portal/Dashboard:
+			- (placeholder) stats/charts
+			- User management
+				- Create admin user
+				- Create non-admin user
+				- (placeholder) view all users 
+				  & show delete/edit-role buttons
+			- (placeholder) category management
+	
+Meredith: 
+	Todo Before Next Scrum:
+		- Submit completed proposal to Lea
+		- Set up project directory structure & push to GitHub
+			- GroupProject
+				- Clotho-App
+					- Server
+					- Client
+				- Misc
+		- Initialize Server (most basic)
+			- Model
+			- Route
+			- Controller
+		- Finalize DB design
+			- Update diagram with accurate names (for reference)
+		- (After Dustin finishes hosting DB)
+			- Sync Sequelize DB model to DB
+
+===============================================================================
+Day01: 2023-10-05 F
+===================
+
+Dustin:
+	Done:
+		- Setup DB (Azure Server)
+
+	Not-Done:
+		- Setup S3
+		- Setup Heroku
+		- Setup Stripe (Acct)
+
+	Needs Assistance:
+		- Will need testing of Azure
+
+	Todo Before Next Scrum:
+		- Setup S3
+		- Setup Heroku
+		- Setup Stripe (Acct)
+		- Put credentials into OneDrive
+
+Soli:
+	Done:
+		- Scrum Doc Start
+		- Proposal Feedback consolidate
+
+	Not-Done:
+		- Setup Client Directory
+		- Initialize
+		- Login Page (bypasses auth)
+		- Admin Dashboard skeleton page
+
+	Needs Assistance:
+		- FE-BE "cheat sheet"
+
+	Todo Before Next Scrum:
+		- Setup Client Directory
+		- Initialize
+		- Research simple table/flow diagram for FE-BE cheat sheet
+		- Login Page (bypasses auth)
+		- Admin Dashboard skeleton page
+
+Meredith: 
+	Done:
+		- Setup repo 
+		- setup trello
+		- setup node server
+		- wrote initial models in sequelize
+		
+	Not-Done:
+		- Any controllers or routes other than one to test
+	
+	Needs Assistance:
+		- Will want notes/instructions for views
+
+	Todo Before Next Scrum:
+		- Start document (cheat sheet) for models and api routes
+		- Start controllers and routes (admin first) 
+		-
+
+===============================================================================
+Day03: 2023-10-10 T
+===================
+
+Dustin:
+	Done:
+		- Model for images
+		- Azure db credentials
+		- Began Setup S3 and Stripe
+		
+	Not-Done:
+		- Heroku
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Finish server integration (Azure, S3, Heroku)
+
+Soli:
+	Done:
+		- Made this scrum file & organized directory/notes to-date
+		- Created & Initialized Client
+		- Started Miro Flowchart - FE-BE- cheat sheet
+	Not-Done:
+		-Admin Dashboard
+		-Login Page 
+	
+	Needs Assistance:
+		- --
+
+	Todo Before Next Scrum:
+		- Admin
+		- Login
+
+Meredith: 
+	Done:
+		- Controllers and routes for Admin portal: Categories, Users
+		- readme.txt and started links to resources
+		
+	Not-Done:
+		- CRUD for Orders and Listings
+	
+	Needs Assistance:
+		- Images
+		- Instructions to make changes to routes/controllers if needed
+		- Search and sorting 
+
+	Todo Before Next Scrum:
+		- Add listing attributes to db
+		- Finish Admin CRUD: Orders, Listings, Login/Logout
+		- Auth
+
+
+2023-10-11
+===================
+
+Dustin:
+	Done:
+		- Rough draft of front end and back end photo upload
+		- Rough draft of payment processor back end
+		
+	Not-Done:
+		- Heroku
+		- front end payment processor
+	
+	Needs Assistance:
+		- standardization of syntax with Meredith for photo upload
+
+	Todo Before Next Scrum:
+		- Heroku and payment processor
+
+Soli:
+	Done:
+		- First admin view for get 
+		- setup front end directories
+		
+	Not-Done:
+		- login
+	
+	Needs Assistance:
+		- Check in about auth/login
+
+	Todo Before Next Scrum:
+		- Admin portal: user CRUD
+
+Meredith: 
+	Done:
+		- All initial CRUD for admins and users except login/logout (auth, images, payments, transactions not implemented)
+		
+	Not-Done:
+		- Authentication/authorization
+		- login/logout controllers + routes
+	
+	Needs Assistance:
+		- might want help/consultation about searching and sorting
+		- might need help with Stripe for order placement/refunds
+
+	Todo Before Next Scrum:
+		- transactions
+		- auth
+
+
+2023-10-12
+===================
+
+Dustin:
+	Done:
+		- More work on payments
+		- Photo upload in front and back
+		- Started implementing cart
+		
+	Not-Done:
+		- Heroku
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Finish photo uploads and payments
+		- test pages for photo uploads, payments, cart
+
+Soli:
+	Done:
+		- Documentation (cheat sheet 1)
+		- Admin Users create, get list, delete (testing)
+		
+	Not-Done:
+		- Still login
+	
+	Needs Assistance:
+		- Confused by server response re: Admin CRUD
+
+	Todo Before Next Scrum:
+		- placeholder image / default
+		- user profile
+			- Admin Update user
+			- View own user profile
+
+Meredith: 
+	Done:
+		- implemented transactions for orders in back end
+		- implemented JWT 
+		- login/logout
+		- protected routes	
+		
+	Not-Done:
+		- testing for login and protected routes
+	
+	Needs Assistance:
+		- what changes need to be made in API for stripe payments and images
+
+	Todo Before Next Scrum:
+		- implement listing image paths in db
+		- React login/logout and user auth storage
+
+
+Side notes:
+
+View listing details (similar^)
+New user (reg)(
+New listing (similar^)
+Order
+Order list
+Cart
+
+
+2023-10-14
+===================
+
+Dustin:
+	Done:
+		- Homepage/View listings
+		- Create listing page
+		- Header component
+		
+	Not-Done:
+		- Photo uploads
+		- Stripe
+	
+	Needs Assistance:
+		- Troubleshoot client routes + api calls
+
+	Todo Before Next Scrum:
+		- Photo uploads
+		- Stripe
+
+Soli:
+	Done:
+		- Grappled to the death with React and lost
+		- Delete users
+		
+	Not-Done:
+		- Admin portal: update user/view user profile
+	
+	Needs Assistance:
+		- TBA
+
+	Todo Before Next Scrum:
+		- Design user profile
+		- Troubleshoot client routes
+
+Meredith: 
+	Done:
+		- Login form + logout button
+		- 404 page
+		- Started JWT in front, got stuck on refresh tokens
+		
+	Not-Done:
+		- Listing Images model + edits to controllers
+		- Debugging login/logout/tokens
+	
+	Needs Assistance:
+		- Troubleshooting
+
+	Todo Before Next Scrum:
+		- Finish auth in front
+		- listing images in back
+		- troubleshooting/debugging
+
+2023-10-16
+===================
+
+Dustin:
+	Done:
+		- User Profile
+		- Search Listings
+		- Redid the s3 photo upload
+		
+	Not-Done:
+		- Stripe
+	
+	Needs Assistance:
+		- Search & Photo Upload Troubleshooting
+
+	Todo Before Next Scrum:
+		- Single Listing Page with Add to Cart
+
+Soli:
+	Done:
+		- Client Routes: SOLVED ;_;
+		- persistent header & footer (+designed)
+		- Links to test components
+		
+	Not-Done:
+		- --
+	
+	Needs Assistance:
+		- (maybe) Token/auth access?
+
+	Todo Before Next Scrum:
+		- Plug some actual components into the non-Admin user layout
+		- Conditional render with auth / user role
+
+Meredith: 
+	Done:
+		- fixed auth in back
+		- login/logout in front
+		- listing images in back
+		- modified api controllers/routes
+		- added some error handling/bug fixes in front
+		- modifications to front for auth
+		
+	Not-Done:
+		- login/logout redirects
+		- format display error msgs in front
+	
+	Needs Assistance:
+		- tba
+
+	Todo Before Next Scrum:
+		- test + debug image uploads
+		- troubleshoot listing page
+		- add validation + error handling in front
+		- help with front end links/redirects/conditional rendering
+
+ 2023-10-17
+===================
+
+Dustin:
+	Done:
+		- Single listing page
+		- Worked on S3 uploads
+		
+	Not-Done:
+		- avatar upload
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- implement cart
+		- implement Stripe
+		- help with images
+		- Validation and error handling for any previous work
+
+Soli:
+	Done:
+		- Finalize/reformat top header (missing search bar for now)
+		- Functional persistent sub-header (filters)
+		- Finalized persistent footer
+		- Created logo images
+		- Login Modal (functional, not pretty)
+		- Set up & tested a generalized flash message / popup for error msgs to user
+		
+	Not-Done:
+		- Auth-based rendering of buttons
+	
+	Needs Assistance:
+		- Auth? 
+
+	Todo Before Next Scrum:
+		- registration page
+		- Start implementing flash messages for signup/login/login
+		- filtering logic, consolidation
+		- start admin charts
+		- start plugging in/cleaning up navlinks/redirects
+		- start cleaning up appearance
+		- Validation and error handling for any previous work
+
+
+Meredith: 
+	Done:
+		- partial solution to listings page in front
+		- implemented POST images to S3 for listing images
+		- implemented GET listing images signed urls
+		- implemented search filters
+
+		
+	Not-Done:
+		- validation + error handling for image requests
+		- front end conditional rendering/error handling
+		- validation search filter query params
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- complete images implementation
+		- Validation and error handling for any previous work
+		- add to flash messages after Soli initial
+		- start cleaning up appearance
+		- start plugging in/cleaning up navlinks/redirects
+
+2023-10-18
+===================
+
+Dustin:
+	Done:
+		- Added some error handling and validation
+		- links through photos and username
+		- Updated Listings and ListingPage
+		
+	Not-Done:
+		- Cart
+		- Stripe			
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Edit profile
+		- Heroku Hosting
+		- Start implementing admin view tables (users, listings, orders)
+
+Soli:
+	Done:
+		- registration modal + format
+			- redirects to login, autofills username
+		- login modal + format
+		- Flash messages for signup/login/logout -- Full Implementation
+		- Flash messages for all errors from Header & children
+		- All Header Navlinks & Redirects
+		- "Logged in as" Header NavItem
+		- Validation and error handling -- All Header & Children
+		
+	Not-Done:
+		- Admin Charts
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Double password input for Signup form (must match)
+		- if user is admin, show admin button in header
+		- SubHeader
+			- pre-determined search filters (mens, women, sale)
+		- FilterHeader
+			- All search criteria -- TOGGLES / multi-select
+			- "Clear filters" button
+			- UPDATE ListingTable each time filter criteria changes (already implemented)
+			- 
+		- Start Admin Charts
+			- Research if google analytics
+
+Meredith: 
+	Done:
+		- partial solution to images
+		- some error handling
+		- added to css
+		- added links
+		- minor bug fixes
+		
+	Not-Done:
+		- complete forms with img uploads
+		- complete layouts/styles
+
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- finish images front and back for users and listings
+			- include sell page
+		- filter/sort by price for search page (backend; add to front if not exists)
+		- begin view order history tab in user profile (toggle between selling/buying tabs)
+		- investigate possible logic error in auth
+
+
+2023-10-19
+===================
+
+Dustin:
+	Done:
+		- Edit profile - needs some testing and debugging
+		- Admin tables - users/listings/orders front-end - needs logic
+		- Heroku started
+		-Started cart dropdown
+
+	Not-Done:
+		- Admin & Edit profile logic
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Finish Heroic Setup
+		- Finish edit profile logic
+		- Finish Admin Tables Logic
+		- Add sort to admin tables
+					
+
+Soli:
+	Done:
+		- Started filter header
+		- research for charts (npm simple-charts)
+		
+	Not-Done:
+		- double password
+		- toggle admin navitem
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- Double password input for Signup form (must match)
+		- if user is admin, show admin button in header
+		- SubHeader
+			- pre-determined search filters (mens, women, sale)
+		- FilterHeader
+			- All search criteria -- TOGGLES / multi-select
+			- "Clear filters" button
+			- UPDATE ListingTable each time filter criteria changes (already implemented)
+			- 
+		- Start Admin Charts
+			- Research if google analytics
+
+Meredith: 
+	Done:
+		- create listing with images front and back (works but front needs modifications)
+		- user avatar backend
+		- filter min max price in listings api
+		- fixed logout error
+		
+	Not-Done:
+		- order history view
+		- implement user avatar in front (view + update)
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- finish user avatar
+		- order history view
+
+2023-10-20
+===================
+
+Dustin:
+	Done:
+		- heroku deployment 90%
+		- worked on logic for admin tables
+		
+	Not-Done:
+		- edit profile
+		- 
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- deployment
+		- edit listings
+		- edit profile
+		- admin tables
+
+Soli:
+	Done:
+		- subheader layout + redirects
+		- filter header: dropdowns
+		
+	Not-Done:
+		- filter header api calls
+		- double password + admin
+	
+	Needs Assistance:
+		- admin undelete
+
+	Todo Before Next Scrum:
+		- double password
+		- admin button
+		- subheader + filter header api calls
+		- admin undelete user
+		- start working on ppt/presentation materials
+
+Meredith: 
+	Done:
+		- Partial implementation of user avatars (update avatar form component + axios requests to view)
+		
+	Not-Done:
+		- Complete avatars (set default, include pic in header)
+		- view order history
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- api sort by price high/low
+		- finish images
+		- view order history in user profile
+		- help with admin undelete + check routes doc
+		- update doc with search query params
+		- bug fix price in form
+		- add regex
+		- look into string casting/sanitization
+===============================================================================
+===============================================================================
+===============================================================================
+      ____  ____  __  __  ____  __      __   ____  ____   
+     (_  _)( ___)(  \/  )(  _ \(  )    /__\ (_  _)( ___) ()
+       )(   )__)  )    (  )___/ )(__  /(__)\  )(   )__)   
+      (__) (____)(_/\/\_)(__)  (____)(__)(__)(__) (____) ()            
+===============================================================================
+DayXX: 2023-10-YY Z
+===================
+
+Dustin:
+	Done:
+		- 
+		
+	Not-Done:
+		- 
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- 
+
+Soli:
+	Done:
+		- 
+		
+	Not-Done:
+		- 
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- 
+
+Meredith: 
+	Done:
+		- 
+		
+	Not-Done:
+		- 
+	
+	Needs Assistance:
+		- 
+
+	Todo Before Next Scrum:
+		- 
+
+
+====
+END
+====

@@ -1,0 +1,75 @@
+========================================================================================
+========================================================================================
+Meeting Notes: 2023-10-05
+----------------------------------------------------------------------------------------
+Next Scheduled Meeting: 
+	-Tomorrow Friday 10-06. 
+	-During/after class. 
+	-Must end max 1hr after class ends.
+
+----------------------------------------------------------------------------------------
+First steps per team member:
+
+Meredith:
+	1. Submit completed proposal to Lea
+	2. Set up project directory structure & push to GitHub
+		-GroupProject
+			-Clotho-App
+				-Server
+				-Client
+			-Misc
+	3. Initialize Server (most basic)
+		-Model
+		-Route
+		-Controller
+	4. Finalize DB design
+		-Update diagram with accurate names that we can reference
+	5. (After Dustin finishes hosting DB)
+		-Sync Sequelize DB model to DB
+
+
+Soliloquy:
+	1. Organize & send notes to group
+		-This Doc
+		-Proposal Feedback
+	2. (After Meredith makes directories)
+		-Setup Client Directory
+		-Initialize React App
+	3. Create Skeleton Views/Pages/Components for:
+		-Login/Register
+			-Bypass Auth
+			-Redirect to Admin Portal
+	4. Create Admin Portal/Dashboard:
+		-(placeholder) stats/charts
+		-User management
+			-Create admin user
+			-Create non-admin user
+			-(placeholder) view all users -- show delete/edit-role buttons
+		-(placeholder) category management
+
+Dustin:
+	1. Set up Cloud:
+		-Heroku
+		-Azure DB
+			-No Tables
+			-Schema (Send DB name to Meredith)
+			-Create DBA god-user (also send to Meredith)
+		-S3
+	2. Sign up for Stripe / Payment-Processing Account
+
+
+----------------------------------------------------------------------------------------
+Top-Priority Features:
+
+-Admin Dashboard
+	-CRUD users
+
+
+========================================================================================
+========================================================================================
+
+
+
+
+
+
