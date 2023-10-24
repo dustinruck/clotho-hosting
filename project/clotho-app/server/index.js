@@ -16,7 +16,7 @@ app.use(
 
     cors({
   
-      origin: ["https://clotho-frontend-e926130cfc7f.herokuapp.com","http://localhost:3000"],
+      origin: ["https://clotho-react-f77529ca9d7a.herokuapp.com","http://localhost:3000"],
       // TODO: //
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE","OPTION"],
   
@@ -62,7 +62,7 @@ app.use("/api/attr", attrRouter);
 //Register, update profile, close account
 const userRouter = require("./routes/user-routes");
 app.use("/api/users", userRouter);
-
+//
 //View, post, update listings
 const listingRouter = require("./routes/listing-routes");
 app.use("/api/listings", listingRouter);

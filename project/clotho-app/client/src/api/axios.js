@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import BASE_API_URL from '../util/constant'
 
-const BASE_URL = "https://clotho-backend-part2-f9220f99fed6.herokuapp.com";
+const BASE_URL = "https://clotho-server-backend-37bce87f4993.herokuapp.com/api";
 
 export default axios.create({
     baseURL: BASE_URL
